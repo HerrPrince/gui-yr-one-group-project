@@ -25,11 +25,11 @@
 }
 
 .title::before {
-    background-image: url("../Images/decorator-left.png");
+    background-image: url("../IMAGES/decorator-left.png");
 }
 
 .title::after {
-    background-image: url("../Images/decorator-right.png");
+    background-image: url("../IMAGES/decorator-right.png");
 }
 #lvlDesc {
     font-family: "Beaufort for LOL";
@@ -131,7 +131,7 @@
     background-color: rgb(70, 55, 20);
 }
 .radioLabel:hover {
-	cursor: url(../Images/cursor-pointer.png), auto;
+	cursor: url(../IMAGES/cursor-pointer.png), auto;
 }
 
 #questionWrapper {
@@ -179,11 +179,11 @@ div.questionTaskWrapper > p:first-child::before, div.questionTaskWrapper > p:las
 }
 
 div.questionTaskWrapper > p:first-child::before,  div.questionTaskWrapper > p:last-child::before {
-    background-image: url("../Images/decorator-left.png");
+    background-image: url("../IMAGES/decorator-left.png");
 }
 
 div.questionTaskWrapper > p:first-child::after, div.questionTaskWrapper > p:last-child::after {
-    background-image: url("../Images/decorator-right.png");
+    background-image: url("../IMAGES/decorator-right.png");
 }
 
 div.questionDataWrapper {
