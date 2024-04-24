@@ -25,11 +25,11 @@
 }
 
 .title::before {
-    background-image: url("../Images/decorator-left.png");
+    background-image: url("../IMAGES/decorator-left.png");
 }
 
 .title::after {
-    background-image: url("../Images/decorator-right.png");
+    background-image: url("../IMAGES/decorator-right.png");
 }
 #lvlDesc {
     font-family: "Beaufort for LOL";
@@ -122,16 +122,17 @@
     border: 1px solid rgb(70, 55, 20);
     border-radius: 4px;
     padding: 15px 20px;
-    color: rgb(240, 230, 210);
+    color: rgb(91, 90, 86);
     background-color: rgb(50, 40, 30);
     transition: 0.5s;
 }
 .radioInput:checked + .radioLabel {
+    color: rgb(240, 230, 210);
     border: 1px solid rgb(120 90 40);
     background-color: rgb(70, 55, 20);
 }
 .radioLabel:hover {
-	cursor: url(../Images/cursor-pointer.png), auto;
+	cursor: url(../IMAGES/cursor-pointer.png), auto;
 }
 
 #questionWrapper {
@@ -179,11 +180,13 @@ div.questionTaskWrapper > p:first-child::before, div.questionTaskWrapper > p:las
 }
 
 div.questionTaskWrapper > p:first-child::before,  div.questionTaskWrapper > p:last-child::before {
-    background-image: url("../Images/decorator-left.png");
+    background-image: url("../IMAGES/decorator-left.png");
+    background-image: url("../IMAGES/decorator-left.png");
 }
 
 div.questionTaskWrapper > p:first-child::after, div.questionTaskWrapper > p:last-child::after {
-    background-image: url("../Images/decorator-right.png");
+    background-image: url("../IMAGES/decorator-right.png");
+    background-image: url("../IMAGES/decorator-right.png");
 }
 
 div.questionDataWrapper {
@@ -218,4 +221,14 @@ div.questionDataWrapper {
 
 #keyword {
     text-transform: uppercase;
+}
+#feedbackMessage {
+    font-family: "Beaufort for LOL";
+    font-size: 1.5rem;
+    line-height: 1.08;
+    letter-spacing: 0em;
+    font-weight: 700;
+    color: rgb(240, 230, 210);
+    text-transform: uppercase;
+    transition: 0.5s;
 }
