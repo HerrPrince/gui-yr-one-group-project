@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!DOTYPE HTML>
 <html lang="en">
+    <head>
+        <title>Home Page</title>
 
-<head>
-	<link rel="apple-touch-icon" sizes="57x57" href="../IMAGES/FAVICON/apple-icon-57x57.png"/>
+        <!-- Links to Styles-->
+        <link rel="apple-touch-icon" sizes="57x57" href="../IMAGES/FAVICON/apple-icon-57x57.png"/>
 	<link rel="apple-touch-icon" sizes="60x60" href="../IMAGES/FAVICON/apple-icon-60x60.png"/>
 	<link rel="apple-touch-icon" sizes="72x72" href="../IMAGES/FAVICON/apple-icon-72x72.png"/>
 	<link rel="apple-touch-icon" sizes="76x76" href="../IMAGES/FAVICON/apple-icon-76x76.png"/>
@@ -20,37 +22,38 @@
 	<meta name="msapplication-TileImage" content="../IMAGES/FAVICON/ms-icon-144x144.png"/>
 	<meta name="theme-color" content="#ffffff"/>
 	<meta charset="utf-8"/>
-	<title>ABOUT - VIGCIP</title>
+	<title>HOME - VIGCIP</title>
 	<link rel="stylesheet" type="text/css" href="../CSS/styleGeneral.css"/>
 	<link rel="stylesheet" type="text/css" href="../CSS/fonts.css"/>
-</head>
+    <link rel="stylesheet" type="text/css" href="../CSS/styleHomePage.css"/>
+    </head>
 
-<body>
-	<nav>
-		<div>
-			<a href="homePage.html">HOMEPAGE</a>
-		</div>
-		<div>
-			<a href="gameVigenere.html">VIGENERE GAME</a>
-		</div>
-		<div>
-			<a href="game.html">WORK IN PROGRESS</a>
-		</div>
-		<div>
-			<a href="game.html">WORK IN PROGRESS</a>
-		</div>
-		<div class="currentPage">
-			<a href="#main" class="currentPage">ABOUT US</a>
-		</div>
-	</nav>
-	<main>
+    <body>
+        <!-- Navigation Bar-->
+        <nav>
+            <div class="currentPage">
+                <a href="homePage.html" class="currentPage" onclick="test()">HOMEPAGE</a>
+                </div>
+            </div>
+            </div>
+            <div>
+                <a href="gameVigenere.html">VIGENERE GAME</a>
+            </div>
+            <div>
+                <a href="#!">WORK IN PROGRESS</a>
+            </div>
+            <div>
+                <a href="game.html">WORK IN PROGRESS</a>
+            </div>
+            <div>
+                <a href="about.html">ABOUT US</a>
+            </div>
+        </nav>
+        <!-- Welcome Heading -->
+        <main>
+            <div class="welcome">Welcome</div> 
+            <div class="mainText">Greetings visitor. I'd like to welcome you to [INSERT WEBSITE NAME]. You can explore different Math related games such as Vigenere or [GAME 2].Take your time to explore this page and all that is has to offer. Maths is fun and you are here to see it for yourself! [I have no idea what to write for the welcome message so here you go! Edit to your will] .</div>
+    </body>
 
-	</main>
-	<footer>
-		<div>
-			<p id="copy">&copy; 2024 BY G00432442 | G00428784 | G00436758</p>
-		</div>
-	</footer>
-	<script src="../JS/"></script>
-</body>
+
 </html>

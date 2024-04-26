@@ -361,8 +361,11 @@ document.addEventListener("DOMContentLoaded", function() {
 // Function to update text on the page
 function updateText(modeId) {
 	const displayText = document.getElementById("lvlDesc");
+	const feedback = document.getElementById("feedbackMessage");
+	feedback.style.opacity = "0";
 	if (modeId === "radioEncode") {
 		document.getElementById("radioEncode").checked = true;
+
 		if (getCookie("levelEncryption") === "1") {
 			questionInput.innerHTML = easyEncryptText[dayOfMonth];
 			questionKey.innerHTML = easyEncryptKey[dayOfMonth];
@@ -390,6 +393,8 @@ function updateText(modeId) {
 			displayText.textContent = `ENCODE - COMPLETED!`;
 			document.getElementById("questionWrapper").style.display = "none";
 			document.getElementById("formVigGame").style.display = "none";
+			feedback.style.opacity = "1";
+			feedback.innerText = "ALL ENCRYPTION LEVELS COMPLETED!";
 		}
 
 	} else if (modeId === "radioDecode") {
@@ -421,49 +426,75 @@ function updateText(modeId) {
 			displayText.textContent = `DECODE - COMPLETED!`;
 			document.getElementById("questionWrapper").style.display = "none";
 			document.getElementById("formVigGame").style.display = "none";
+			feedback.style.opacity = "1";
+			feedback.innerText = "ALL DECRYPTION LEVELS COMPLETED!";
 		}
 	}
 }
 
+// Function to 
+function timeoutClear(element, delay) {
+    setTimeout(function() {
+        element.style.opacity = "0";
+    }, delay);
+}
+
 function mainFunction() {
-	let answer = document.getElementById("keyword");
+	const feedback = document.getElementById("feedbackMessage");
+	const answer = document.getElementById("keyword");
+	feedback.style.opacity = "1";
 	if (document.getElementById("radioEncode").checked) {
 		if ((getCookie("levelEncryption") === "1") && (answer.value.toLowerCase() === encrypt(easyEncryptText[dayOfMonth], easyEncryptKey[dayOfMonth]))) {
 			setCookie("levelEncryption", 2, endOfDay());
 			updateText("radioEncode");
+			feedback.innerText = "CORRECT! ENCODE LEVEL 1 COMPLETED!";
+			timeoutClear(feedback, 2500);
 			answer.value = "";
 		}
 		else if ((getCookie("levelEncryption") === "2") && (answer.value.toLowerCase() === encrypt(mediumEncryptText[dayOfMonth], mediumEncryptKey[dayOfMonth]))) {
 			setCookie("levelEncryption", 3, endOfDay());
 			updateText("radioEncode");
-			answer.innerHTML = "";
+			feedback.innerText = "CORRECT! ENCODE LEVEL 2 COMPLETED!";
+			timeoutClear(feedback, 2500);
 			answer.value = "";
 		}
 		else if ((getCookie("levelEncryption") === "3") && (answer.value.toLowerCase() === encrypt(hardEncryptText[dayOfMonth], hardEncryptKey[dayOfMonth]))) {
 			setCookie("levelEncryption", 4, endOfDay());
 			updateText("radioEncode");
-			answer.innerHTML = "";
+			feedback.innerText = "ALL ENCRYPTION LEVELS COMPLETED!";
 			answer.value = "";
+		}
+		else {
+			feedback.innerText = "INCORRECT! TRY AGAIN!";
+			answer.value = "";
+			timeoutClear(feedback, 2500);
 		}
 	}
 	else if (document.getElementById("radioDecode").checked) {
 		if ((getCookie("levelDecryption") === "1") && (answer.value.toLowerCase() === decrypt(easyDecryptText[dayOfMonth], easyDecryptKey[dayOfMonth]))) {
 			setCookie("levelDecryption", 2, endOfDay());
 			updateText("radioDecode");
-			answer.innerHTML = "";
+			feedback.innerText = "CORRECT! DECODE LEVEL 1 COMPLETED!";
+			timeoutClear(feedback, 2500);
 			answer.value = "";
 		}
 		else if ((getCookie("levelDecryption") === "2") && (answer.value.toLowerCase() === decrypt(mediumDecryptText[dayOfMonth], mediumDecryptKey[dayOfMonth]))) {
 			setCookie("levelDecryption", 3, endOfDay());
 			updateText("radioDecode");
-			answer.innerHTML = "";
+			feedback.innerText = "CORRECT! DECODE LEVEL 2 COMPLETED!";
+			timeoutClear(feedback, 2500);
 			answer.value = "";
 		}
 		else if ((getCookie("levelDecryption") === "3") && (answer.value.toLowerCase() === decrypt(hardDecryptText[dayOfMonth], hardDecryptKey[dayOfMonth]))) {
 			setCookie("levelDecryption", 4, endOfDay());
 			updateText("radioDecode");
-			answer.innerHTML = "";
+			feedback.innerText = "ALL DECRYPTION LEVELS COMPLETED!";
 			answer.value = "";
+		}
+		else {
+			feedback.innerText = "INCORRECT! TRY AGAIN!";
+			answer.value = "";
+			timeoutClear(feedback, 2500);
 		}
 	}
 	

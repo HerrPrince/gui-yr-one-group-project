@@ -1,0 +1,39 @@
+/* Welcome Sign */
+.welcome
+    {
+        color: rgb(200, 155, 60);
+        width: 660px;
+        height: 110px;
+        position: relative;
+        font-size: 65;
+        animation-name: title;
+        animation-delay: 1s;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+    }
+/* Animation Code For Welcome Sign*/   
+@keyframes title {
+    0% {opacity: 0%;}
+    50% {opacity: 100%;}
+    51% {top: 0px; transform: scale(1,1);}
+    100% {top: -70px;transform: scale(0.8, 0.8);}
+}
+
+/* Main Body Text */
+.mainText
+{
+    color: rgb(200, 155, 60);
+    width: 660px;
+    height: 110px;
+    position: relative;
+    animation-name: mainBody;
+    animation-delay: 6s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+@keyframes mainBody {
+    0% {opacity: 0%; top: -80px;}
+    100% {opacity: 100%; top: -80px;}
+}
