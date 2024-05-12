@@ -202,7 +202,7 @@ function encrypt(txt, keyword) {
 	document.getElementById("rest").innerHTML = "";
 	i = 0;
 	j = 0;
-	document.getElementById("resh").innerHTML = "ENCRYPTION RESULT:";
+	document.getElementById("resh").innerHTML = "ENCRYPTION RESULT";
 	lengthTxt = txt.length;
 	lengthKwd = keyword.length;
 	while (i < lengthTxt) {
@@ -243,7 +243,7 @@ function decrypt(txt, keyword) {
 	document.getElementById("rest").innerHTML = "";
 	i = 0;
 	j = 0;
-	document.getElementById("resh").innerHTML = "DECRYPTION RESULT:";
+	document.getElementById("resh").innerHTML = "DECRYPTION RESULT";
 	lengthTxt = txt.length;
 	lengthKwd = keyword.length;
 	while (i < lengthTxt) {
@@ -297,7 +297,10 @@ function mainFunction() {
 	} else if (document.getElementById("decrypt").checked) {
 		decrypt(txt, keyword);
 	} else {
-		location.reload();
+		document.getElementById("copyt").style.display = "none";
+		document.getElementById("resh").innerHTML = "SELECT OPERATING MODE!";
+		document.getElementById("rest").innerHTML = "";
+		// location.reload();
 	}
 	
 }
