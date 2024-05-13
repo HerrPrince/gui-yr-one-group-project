@@ -1,22 +1,40 @@
 /* Welcome Sign */
 .welcome
     {
-        color: rgb(200, 155, 60);
-        width: 660px;
+        color: rgb(30, 35, 40);
+        width: 1850px;
         height: 110px;
         position: relative;
-        font-size: 65;
+        font-size: 150;
         animation-name: title;
         animation-delay: 1s;
         animation-duration: 5s;
         animation-fill-mode: forwards;
     }
-/* Animation Code For Welcome Sign*/   
+/* Animation Code For Welcome Sign */
 @keyframes title {
     0% {opacity: 0%;}
-    50% {opacity: 100%;}
+    50% {opacity: 100%; color: rgb(200, 155, 60);}
     51% {top: 0px; transform: scale(1,1);}
-    100% {top: -70px;transform: scale(0.8, 0.8);}
+    100% {top: -290px;transform: scale(0.5, 0.5); color: rgb(200, 155, 60);}
+}
+
+/* Decoration Image */
+.image-Line
+    {
+        opacity: 0%;
+        animation-name: headerLine;
+        position: absolute;
+        top: 200px;
+        right: 285px;
+        animation-delay: 6s;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+/* Image Decoration Animation */
+@keyframes headerLine {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
 }
 
 /* Main Body Text */
