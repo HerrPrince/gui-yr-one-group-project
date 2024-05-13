@@ -149,6 +149,8 @@
 }
 
 .personImage {
+    display: flex;
+	align-items: center;
     padding: 0 0 1% 0;
 }
 
