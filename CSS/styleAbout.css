@@ -128,11 +128,38 @@
     text-decoration: underline;
 }
 
+.people {
+    width: 100vw;
+    height: auto;
+}
 
+.personWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+}
+.personDescription {
+    display: flex;
+	align-items: center;
+    padding: 0 0 1% 10%;
+    border-bottom: 1px solid rgb(200, 155, 60);
+}
 
-.circle {
-    width: 200px;
-    height: 200px;
+.personImage {
+    padding: 0 0 1% 0;
+}
+
+.personDescription > p {
+    font-family: "Spiegel";
+    font-size: 1rem;
+    line-height: 1.24;
+    letter-spacing: 0.01em;
+    color: rgb(160, 155, 140);
+}
+
+.personImage > img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
