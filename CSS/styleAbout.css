@@ -114,9 +114,19 @@
     color: rgb(160, 155, 140);
     height: auto;
     margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(200, 155, 60);
 }
 
-
+.moreDesc > p > a {
+    font-family: "Spiegel";
+    font-size: 1rem;
+    line-height: 1.24;
+    letter-spacing: 0.01em;
+    color: rgb(160, 155, 140);
+    height: auto;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+}
 
 
 

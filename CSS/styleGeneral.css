@@ -79,7 +79,7 @@ form > div {
 	margin: 0 2% 0 0;
 	display: inline;
 }
-input:hover, button:hover, nav > div:hover, nav > div > a:hover {
+input:hover, button:hover, nav > div:hover, nav > div > a:hover, .moreDesc > p > a:hover {
 	cursor: url(../IMAGES/cursor-pointer.png), auto;
 }
 #sbm, button {
