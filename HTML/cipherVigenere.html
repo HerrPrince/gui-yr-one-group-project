@@ -20,8 +20,9 @@
 	<meta name="msapplication-TileImage" content="../IMAGES/FAVICON/ms-icon-144x144.png"/>
 	<meta name="theme-color" content="#ffffff"/>
 	<meta charset="utf-8"/>
-	<title>HOME - VIGCIP</title>
+	<title>CIPHER - VIGCIP</title>
 	<link rel="stylesheet" type="text/css" href="../CSS/styleGeneral.css"/>
+	<link rel="stylesheet" type="text/css" href="../CSS/styleCipherVigenere.css"/>
 	<link rel="stylesheet" type="text/css" href="../CSS/fonts.css"/>
 </head>
 
@@ -48,22 +49,27 @@
 		<img alt="decoration" src="../IMAGES/decorator-hr-lg.png" />
 		<br><br>
 		<form id="formularz" action="" method="">
-			<div>
-				<input type="radio" id="encrypt" name="mode" value="encrypt" checked="checked">
-				<label class="labelCipher" for="encrypt">ENCRYPT</label>
+			<div class="radio">
+				<div class="radioOption encodeRadio">
+					<input class="radioInput" type="radio" value="encrypt" name="mode" id="encrypt"/>
+					<label class="radioLabel" for="encrypt">ENCRYPT</label>
+				</div>
+				<div class="radioOption decodeRadio">
+					<input class="radioInput" type="radio" value="decrypt" name="mode" id="decrypt"/>
+					<label class="radioLabel" for="decrypt">DECRYPT</label>
+				</div>
 			</div>
-			<div>
-				<input type="radio" id="decrypt" name="mode" value="decrypt">
-				<label class="labelCipher" for="decrypt">DECRYPT</label>
+			<div class="textLabel">
+				<p>TEXT</p>
 			</div>
-			<br><br>
-			<label class="labelCipher" for="texts">YOUR TEXT:</label><br>
-			<input type="text" id="texts" autofocus><br><br><br>
-			<label class="labelCipher" for="keyword">YOUR KEYWORD:</label><br>
-			<input type="text" id="keyword"><br><br>
+			<input type="text" id="texts" placeholder="TYPE TEXT HERE" autofocus>
+			<div class="keywordLabel">
+				<p>KEYWORD</p>
+			</div>
+			<input type="text" id="keyword" placeholder="TYPE KEYWORD HERE"><br><br>
 			<input type='submit' id="sbm" value="GO!"><br>
 		</form>
-		<h3 id="resh"></h3>
+		<p id="resh"></p>
 		<p id="rest"></p>
 		<button id="copyt" onclick="copy()">COPY!</button>
 		
@@ -73,6 +79,6 @@
 			<p id="copy">&copy; 2024 BY G00432442 | G00428784 | G00436758</p>
 		</div>
 	</footer>
-	<script src="../JS/scriptVigEnDe.js"></script>
+	<script src="../JS/scriptCipherVigenere.js"></script>
 </body>
 </html>

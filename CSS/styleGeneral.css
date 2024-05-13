@@ -65,21 +65,6 @@ body {
 	flex-wrap: wrap;
 	background-color: rgb(30, 35, 40);
 }
-.labelCipher, #rest, #resh {
-	font-family: "Beaufort for LOL";
-	font-weight: 400;
-	background: repeating-linear-gradient(to right, #785A28, #C89B3C);
-	-webkit-background-clip: text;
-	background-clip: text;
-  	color: transparent;
-}
-#resh {
-	margin-top: 1%;
-}
-#rest {
-	font-size: 2em;
-	color: #CDFAFA;
-}
 input, button {
 	font-family: "Beaufort for LOL";
 	font-weight: 400;
@@ -88,7 +73,6 @@ input, button {
 	border-color: #32281E;
 	text-align: center;
 	padding: 1%;
-	margin-top: 1%;
 	border-color: #785A28;
 }
 form > div {
