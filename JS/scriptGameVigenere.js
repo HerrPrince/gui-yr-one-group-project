@@ -1,6 +1,10 @@
+// Script file for the gameVigenere.html website
+
+// Getting current date
 let today = new Date();
 let dayOfMonth = today.getDate() - 1;
 
+// Arrays with keywords for the game
 const easyEncryptText = ["broil", "chime", "decoy", "elbow", "fjord", "glyph", "hinge", "irony", "junto", "kneel", "lemon", "morph", "nylon", "oxide", "plume", "quart", "roast", "swoop", "truce", "usher", "vague", "waltz", "yield", "zesty", "amend", "bloom", "crane", "dutch", "exalt", "frost", "grind"];
 const easyEncryptKey = ["abort", "blush", "creek", "droll", "ethos", "flair", "gauge", "hoist", "incur", "jaunt", "knoll", "lofty", "miner", "novel", "opera", "prong", "quire", "relay", "scout", "thorn", "unite", "vapor", "wharf", "xylem", "young", "zeal", "admit", "brisk", "chess", "dwelt", "equip"];
 
@@ -19,6 +23,7 @@ const hardEncryptKey = ["notebooks", "adventure", "blueprint", "clockwise", "dyn
 const hardDecryptText = ["yase cgumfgk yip cjgxqox", "pchlr rjfqv bwh pus", "ajwqh jmfll jhmxuny mln ttdyz", "yvh kmcwp xnqna pb", "ztf nydst ygxmf ofvb mnq uens", "sjpcwt hcraqt bfeuzevti", "bis xaxxf lzswznp asem", "okdst wadot ti zjaqi", "dmq ozz laicje fgk vhccj", "ssa lgya heecyul ecbw ysj", "eiohhzt tfzds sg wiu bmmzw", "gil vxlni lnmscym nansusm", "o hcipaz yznefqgn bb yjz ngzxnj", "hctcf lrhsh vwgn nqt qwyrffs", "jin qua gahft bixmsueo", "yz ybyb wwl jctxm", "lmm kjka tiar cutlkfme", "kykj txlme bd bmw yru", "u gmgr jxwlfje", "ovi ksa bdnig wqgjum", "bngl uuy hv pqg jiscvt", "obespwcwm bxq ks fms dcvaps", "rms exwcg wgsuh", "z qdfk gyxlr xi hox nwwd", "tmf eji lqss no fwz pqrt", "uny kjvs yrnvm mant", "uqt kjpfa gga zlqt", "dv pjq ttdhv iu ansmi", "lj rsmmcwx lni iscm", "f bpn hffupx pihdmhb yma xedvt", "yzf pqriuskk irw ypy"];
 const hardDecryptKey = ["breakfast", "chocolate", "dialogues", "enchanted", "flamingos", "geography", "handiwork", "isolation", "jellyfish", "knighthood", "landscape", "magnitude", "nebulous", "operation", "paintings", "questions", "rehearsal", "spherical", "telescope", "undermine", "vibrating", "wavelength", "xenophobe", "youngster", "zealously", "afterglow", "biography", "chameleon", "departure", "evaporate", "framework"];
 
+// Function to change letter to a number
 function ltn(letter) {
 	let numLetter = 0;
 	switch (letter) {
@@ -133,6 +138,7 @@ function ltn(letter) {
 	return numLetter;
 }
 
+// Function to change number to a letter
 function ntl(code) {
 	let letterNum = 0;
 	switch(code) {

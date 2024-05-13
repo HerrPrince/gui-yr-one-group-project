@@ -1,3 +1,6 @@
+// Script file for the cipherVigenere.html website
+
+// Function to change letter to a number
 function ltn(letter) {
 	let numLetter = 0;
 	switch (letter) {
@@ -112,6 +115,7 @@ function ltn(letter) {
 	return numLetter;
 }
 
+// Function to change number to a letter
 function ntl(code) {
 	let letterNum;
 	switch(code) {

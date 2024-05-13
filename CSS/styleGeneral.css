@@ -1,3 +1,6 @@
+/* General styles file for all the websites, to achieve a consistant look */
+
+
 *:hover {
 	cursor: url(../IMAGES/cursor.png), auto;
 }
